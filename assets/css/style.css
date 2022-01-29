@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* Mixins */
 /* Styles
@@ -8,8 +9,10 @@ HTML, BODY {
 BODY {
   margin: 0;
   padding: 0;
-  background: black;
-  font-family: Arial;
+  background: none;
+  font-family: Droid Sans Regular;
+  # background: black;
+  # font-family: Arial;
   font-size: 16px; }
   @media (max-width: 700px), (max-height: 350px) {
     BODY {
@@ -49,14 +52,14 @@ LI {
   margin: 0 1em;
   background: transparent !important;
   vertical-align: middle;
-  transition: 0.5s; }
+  transition: 0.1s; }
   .dottes:before, .dottes:after {
     content: "";
     display: block;
     width: 1em;
     height: 0;
-    border-bottom: 1em solid #151515;
-    transition: border-color 0.5s; }
+    border-bottom: 1em solid rgb(255, 255, 255, 0.12);
+    transition: box-shadow 1000s cubic-bezier(0, 0, 0.2, 1); }
   .dottes:before {
     margin-bottom: 2em; }
 
@@ -78,8 +81,8 @@ LI {
     content: "";
     display: block;
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 0.5;
+    height: 0.5;
     border: 0.5em solid transparent;
     transition: border-color 0.5s; }
 
@@ -87,7 +90,7 @@ LI {
   clear: both;
   width: 3.4em;
   height: 1em;
-  margin: 0 auto; }
+  margin: auto; }
 
 .item--1:before, .item--1:after {
   border-bottom-color: transparent !important; }
@@ -102,7 +105,7 @@ LI {
 
 .item--4 {
   width: 3.4em;
-  margin: 4em auto 0; }
+  margin: 3.4; }
   .item--4:before {
     left: -0.5em;
     border-left: 0;
@@ -168,9 +171,11 @@ LI {
   border-right-color: transparent !important; }
 
 .item {
-  background: #151515; }
+  background: none; }
+  # background: #151515; }
   .item:before, .item:after {
-    border-color: #151515; }
+    # border-color: #151515; }
+    background: none; }
 
 .digit--sec {
   vertical-align: text-bottom;
