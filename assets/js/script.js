@@ -26,16 +26,16 @@ var digits_items = document.querySelectorAll(".digit__item");
 var dottes = document.querySelector(".dottes");
 var dottes_items = document.querySelectorAll(".dottes__item");
 
-setTime();
+setTime ();
 var interval = setInterval(setTime,1000);	
 
-function setTime() {
+function setTime () {
 
 	// Get Date 
-	var now = new Date();
-	var hour = now.getHours() >= 10 ? now.getHours() : "0" + now.getHours();
-	var min = now.getMinutes() >= 10 ? now.getMinutes() : "0" + now.getMinutes();
-	var sec = now.getSeconds() >= 10 ? now.getSeconds() : "0" + now.getSeconds();
+	var now = new Date ();
+	var hour = now.getHours () >= 10 ? now.getHours () : "0" + now.getHours ();
+	var min = now.getMinutes () >= 10 ? now.getMinutes () : "0" + now.getMinutes ();
+	var sec = now.getSeconds () >= 10 ? now.getSeconds () : "0" + now.getSeconds ();
 	var date_string = hour + "" + min + "" + sec;
 
 	// Change Time
@@ -63,7 +63,7 @@ function setTime() {
 	// Change colors
 	if ( color_time_counter == color_period ){
 		color_time_counter = 0;
-		change_color_by_style();
+		change_color_by_style ();
 	}
 	else {
 		color_time_counter++;
@@ -97,12 +97,12 @@ function remove_class_from_elem ( elem, class_prefix ) {
 	}
 }
 
-function change_color_by_style(){
+function change_color_by_style (){
 
-	var hue_value = 360 / color_steps_max * color_step;
-	var bright_value = 50; 
+	var hue_value = 480 / color_steps_max * color_step;
+	var bright_value = 45; 
 	
-	var current_color = "hsl(" + hue_value + ", 70%, " + bright_value + "%)";
+	var current_color = "hsl(" + hue_value + ", 146%, " + bright_value + "%)";
 	var color_class_local = "." + color_class;
 
 	var styles = color_class_local + " { background: " + current_color + "; }";
@@ -114,6 +114,6 @@ function change_color_by_style(){
 		color_step++;
 	}
 	else {
-		color_step = 0;
+		color_step = 4;
 	}
 }
