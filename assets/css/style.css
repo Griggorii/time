@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /* Mixins */
 /* Styles
@@ -175,7 +174,6 @@ LI {
   # background: #151515; }
   .item:before, .item:after {
     # border-color: #151515; }
-    background: none; }
 
 .digit--sec {
   vertical-align: text-bottom;
